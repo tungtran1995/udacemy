@@ -7,7 +7,7 @@ import { CreateUserParams } from '@/shared/types/user.type';
 
 export async function createUser(params: CreateUserParams) {
   try {
-    connectToDatabase();
+    await connectToDatabase();
     const user = await UserModel.create(params);
 
     return user;
