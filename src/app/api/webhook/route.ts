@@ -36,8 +36,6 @@ export async function POST(request: Request) {
   const eventType = message.type;
 
   if (eventType === 'user.created') {
-    console.log('Create user ');
-
     // create user to database
     const {
       email_addresses: emailAddress,
